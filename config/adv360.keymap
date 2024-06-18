@@ -10,6 +10,13 @@
 #define LAYER_TEST 4
 #define LAYER_SHORTCUTS 5
 
+/*
+ Configuraciones de teclado lationamericano
+ SEMI - ñ
+ LEFT_BRACKET - acento ´
+ SQT - open bracckets {}
+*/
+
 / {
     behaviors {
       #include "macros.dtsi"
@@ -77,7 +84,7 @@
       bindings = <
         &kp EQUAL               &kp N1                  &kp N2                &kp N3                &kp N4                  &kp N5              &mo LAYER_KEYPAD                                                                          &mo LAYER_BT                   &kp N6        &kp N7            &kp N8                &kp N9            &kp N0            &kp MINUS
         &kp TAB                 &kp Q                   &kp W                 &kp E                 &kp R                   &kp T               &none                                                                                     &tog LAYER_TEST                &kp Y         &kp U             &kp I                 &kp O             &kp P             &kp LEFT_BRACKET
-        &kp ESC                 &kp A                   &kp S                 &hm LGUI D            &kp F                   &kp G               &none                &kp LALT   &kp LCTRL   &kp RCTRL     &kp RGUI                        &mo LAYER_SHORTCUTS            &kp H         &kp J             &hm LGUI K            &kp L             &kp SEMI          &kp RIGHT_BRACKET
+        &kp ESC                 &kp A                   &kp S                 &hm RGUI D            &hm LC(LA(LGUI)) F      &kp G               &none                &kp LALT   &kp LCTRL   &kp RCTRL     &kp RGUI                        &mo LAYER_SHORTCUTS            &kp H         &kp J             &hm LGUI K            &kp L             &hm LALT SEMI     &kp RIGHT_BRACKET
         &kp LSHFT               &kp Z                   &kp X                 &kp C                 &kp V                   &kp B                                               &kp ENTER   &kp PG_UP                                     &kp N                          &kp M         &kp COMMA         &kp DOT               &kp FSLH          &kp RSHFT
         &kp LC(LA(LGUI))        &kp GRAVE               &kp CAPS              &kp LEFT              &kp RIGHT                                              &kp BSPC  &kp RGUI   &kp DEL     &kp PG_DN     &kp ENTER   &kp SPACE           &kp DOWN                       &kp UP        &kp SQT           &kp BACKSLASH         &mo 2
       >;
