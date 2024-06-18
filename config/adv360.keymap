@@ -8,6 +8,7 @@
 #define LAYER_KEYPAD 2
 #define LAYER_FUNCTIONS 3
 #define LAYER_BT 4
+#define LAYER_TEST 5
 
 / {
     behaviors {
@@ -39,10 +40,10 @@
     default_layer {
       bindings = <
         &kp EQUAL               &kp N1                  &kp N2                &kp N3                &kp N4                  &kp N5              &mo LAYER_KEYPAD                                                                          &mo LAYER_BT                   &kp N6        &kp N7            &kp N8                &kp N9            &kp N0            &kp MINUS
-        &kp TAB                 &kp Q                   &kp W                 &kp E                 &kp R                   &kp T               &none                                                                                     &none                          &kp Y         &kp U             &kp I                 &kp O             &kp P             &kp LEFT_BRACKET
+        &kp TAB                 &kp Q                   &kp W                 &kp E                 &kp R                   &kp T               &none                                                                                     &tog LAYER_TEST                &kp Y         &kp U             &kp I                 &kp O             &kp P             &kp LEFT_BRACKET
         &kp ESC                 &kp A                   &kp S                 &kp D                 &kp F                   &kp G               &none                &kp LALT   &kp LCTRL   &kp RCTRL     &kp RGUI                        &mo LAYER_SHORTCUTS            &kp H         &kp J             &kp K                 &kp L             &kp SEMI          &kp RIGHT_BRACKET
-        &kp LSHFT               &kp Z                   &kp X                 &kp C                 &kp V                   &kp B                                               &kp DEL     &kp PG_UP                                     &kp N                          &kp M         &kp COMMA         &kp DOT               &kp FSLH          &kp RSHFT
-        &kp LC(LA(LGUI))        &kp GRAVE               &kp CAPS              &kp LEFT              &kp RIGHT                                              &kp BSPC  &kp RGUI   &kp ENTER   &kp PG_DN     &kp ENTER   &kp SPACE           &kp DOWN                       &kp UP        &kp SQT           &kp BACKSLASH         &mo 2
+        &kp LSHFT               &kp Z                   &kp X                 &kp C                 &kp V                   &kp B                                               &kp ENTER   &kp PG_UP                                     &kp N                          &kp M         &kp COMMA         &kp DOT               &kp FSLH          &kp RSHFT
+        &kp LC(LA(LGUI))        &kp GRAVE               &kp CAPS              &kp LEFT              &kp RIGHT                                              &kp BSPC  &kp RGUI   &kp DEL     &kp PG_DN     &kp ENTER   &kp SPACE           &kp DOWN                       &kp UP        &kp SQT           &kp BACKSLASH         &mo 2
       >;
     };
     shortcuts_layer {
@@ -79,6 +80,15 @@
         &none &none        &none        &none        &none        &none        &none                   &none &none &bt BT_CLR &none                      &rgb_ug RGB_MEFS_CMD 5 &none        &none        &none        &none &none &none
         &none &none        &none        &none        &macro_ver   &none                                      &none &none                                                        &none        &none        &none        &none &none &none
         &none &none        &none        &none        &none                                       &none &none &none &none      &bl BL_TOG &rgb_ug RGB_TOG                                     &bl BL_INC   &bl BL_DEC   &none &none &none
+      >;
+    };
+    test_layer {
+      bindings = <
+        &kp EQUAL               &kp N1                  &kp N2                &kp N3                &kp N4                  &kp N5              &mo LAYER_KEYPAD                                                                          &mo LAYER_BT                   &kp N6        &kp N7            &kp N8                &kp N9            &kp N0            &kp MINUS
+        &kp TAB                 &kp Q                   &kp W                 &kp E                 &kp R                   &kp T               &none                                                                                     &tog LAYER_DEFAULT             &kp Y         &kp U             &kp I                 &kp O             &kp P             &kp LEFT_BRACKET
+        &kp ESC                 &kp A                   &kp S                 &mt LGUI D            &kp F                   &kp G               &none                &kp LALT   &kp LCTRL   &kp RCTRL     &kp RGUI                        &mo LAYER_SHORTCUTS            &kp H         &kp J             &mt LGUI K            &kp L             &kp SEMI          &kp RIGHT_BRACKET
+        &kp LSHFT               &kp Z                   &kp X                 &kp C                 &kp V                   &kp B                                               &kp DEL     &kp PG_UP                                     &kp N                          &kp M         &kp COMMA         &kp DOT               &kp FSLH          &kp RSHFT
+        &kp LC(LA(LGUI))        &kp GRAVE               &kp CAPS              &kp LEFT              &kp RIGHT                                              &kp BSPC  &kp RGUI   &kp ENTER   &kp PG_DN     &kp ENTER   &kp SPACE           &kp DOWN                       &kp UP        &kp SQT           &kp BACKSLASH         &mo 2
       >;
     };
   };
