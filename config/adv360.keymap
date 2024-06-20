@@ -44,8 +44,8 @@
           compatible = "zmk,behavior-hold-tap";
           label = "HOMEROW_MODS";
           #binding-cells = <2>;
-          tapping-term-ms = <153>;
-          quick_tap_ms = <136>;
+          tapping-term-ms = <133>;
+          quick_tap_ms = <116>;
           flavor = "tap-preferred";
           bindings = <&kp>, <&kp>;
       };
@@ -54,8 +54,8 @@
           compatible = "zmk,behavior-hold-tap";
           label = "LAYER_MODS";
           #binding-cells = <2>;
-          tapping-term-ms = <193>;
-          quick_tap_ms = <168>;
+          tapping-term-ms = <181>;
+          quick_tap_ms = <164>;
           flavor = "tap-preferred";
           bindings = <&mo>, <&kp>;
       };
